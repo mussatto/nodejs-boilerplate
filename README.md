@@ -1,3 +1,9 @@
-The OpenShift `nodejs` cartridge documentation can be found at:
+Simple Openshift boilerplate
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+Can be used for other projects too
+
+uses:
+express 4
+bootstrap
+sequelize
+jquey
