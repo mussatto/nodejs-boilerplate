@@ -8,7 +8,8 @@ app.controller('CreatePostController', function($scope, $http) {
 
     $scope.create_post = function(){
 
-      var data = {};
+      var data = { short_tag:$scope.short_tag, posts : $scope.posts};
+      
       $http.post("/admin/create_post", data);
     }
 });
