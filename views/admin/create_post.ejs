@@ -1,7 +1,7 @@
 <% layout('../layouts/admin_layout') -%>
 <div ng-app="blog" ng-controller="CreatePostController">
   <h1>Criar Post</h1>
-  
+
   <form action="/admin/create_post">
     <input name="short_tag" id="short_tag" alt="Short Tag" ng-model="short_tag"/>
 
@@ -27,9 +27,10 @@
 
         </div>
     </div>
-
-    <button  ng-click="addPost()" >Add New Content</button>
-
+    <div>
+      <button  ng-click="add_post()" >Add New Content</button>
+      <button  ng-click="create_post()" >Create!</button>
+    </div>
   </form>
 
 </div>

@@ -1,8 +1,14 @@
-app.controller('CreatePostController', function($scope) {
+app.controller('CreatePostController', function($scope, $http) {
     $scope.short_tag = "";
     $scope.posts = [{title:"", content:"", language:""}];
 
-    $scope.addPost = function(){
+    $scope.add_post = function(){
       $scope.posts.push({title:"", content:"", language:""});
+    }
+
+    $scope.create_post = function(){
+
+      var data = {};
+      $http.post("/admin/create_post", data);
     }
 });
