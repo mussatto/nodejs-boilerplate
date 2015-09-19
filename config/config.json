@@ -1,0 +1,23 @@
+{
+  "development": {
+  "username": "boilerplate",
+  "password": "boilerplate",
+  "database": "boilerplate",
+  "host": "localhost",
+  "dialect": "mysql",
+  "port": "3306",
+  "pool": {
+    "max": 5,
+    "min": 0,
+    "idle": 10000
+  }
+  },
+  "production": {
+  "username": {"ENV":"OPENSHIFT_MYSQL_DB_USERNAME"},
+  "password": {"ENV":"OPENSHIFT_MYSQL_DB_PASSWORD"},
+  "database": "boilerplate",
+  "host": {"ENV":"OPENSHIFT_MYSQL_DB_HOST"},
+  "dialect": "mysql",
+  "port": {"ENV":"OPENSHIFT_MYSQL_DB_PORT"}
+  }
+}

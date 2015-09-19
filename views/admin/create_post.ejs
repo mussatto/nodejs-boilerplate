@@ -1,0 +1,38 @@
+<% layout('../layouts/admin_layout') -%>
+<div ng-app="blog" ng-controller="CreatePostController">
+  <h1>Criar Post</h1>
+  
+  <form action="/admin/create_post">
+    <input name="short_tag" id="short_tag" alt="Short Tag" ng-model="short_tag"/>
+
+    <div ng-repeat="post in posts">
+
+      <div class="post">
+
+          <div class="form-group">
+            <label>title</label>
+            <input class="form-control"  alt="post-title" ng-model="post.title"></input>
+          </div>
+
+          <div class="form-group">
+            <label>language</label>
+            <input class="form-control"  ng-model="post.language" alt="language"></input>
+          </div>
+
+          <div class="form-group">
+            <label>content</label>
+            <textarea class="form-control" ng-model="post.content">
+            </textarea>
+          </div>
+
+        </div>
+    </div>
+
+    <button  ng-click="addPost()" >Add New Content</button>
+
+  </form>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+<script src="/js/app/app.js"></script>
+<script src="/js/controller/CreatePostController.js"></script>
