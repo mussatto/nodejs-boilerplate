@@ -5,6 +5,7 @@ var status = require('http-status');
 var assert = require('assert');
 
 var should_index = function(done){
+  console.log("t=should_index");
   superagent.get('http://localhost:8080/').end(function(err, res){
     assert.ifError(err);
     expect(res.status).to.be.equal(status.OK);
@@ -14,6 +15,7 @@ var should_index = function(done){
 };
 
 var should_about = function(done){
+  console.log("t=should_about");
   superagent.get('http://localhost:8080/sobre').end(function(err, res){
     assert.ifError(err);
     expect(res.status).to.be.equal(status.OK);
@@ -22,6 +24,7 @@ var should_about = function(done){
 };
 
 var should_posts = function(done){
+  console.log("t=should_posts");
   superagent.get('http://localhost:8080/posts').end(function(err, res){
     assert.ifError(err);
     expect(res.status).to.be.equal(status.OK);
@@ -30,6 +33,7 @@ var should_posts = function(done){
 };
 
 var should_contact = function(done){
+  console.log("t=should_contact");
   superagent.get('http://localhost:8080/contato').end(function(err, res){
     assert.ifError(err);
     expect(res.status).to.be.equal(status.OK);
@@ -39,6 +43,7 @@ var should_contact = function(done){
 };
 
 var should_404 = function(done){
+  console.log("t=should_404");
   superagent.get('http://localhost:8080/banananana').end(function(err, res){
     assert.ifError(err);
     //expect(res.status).to.be.equal(404);
