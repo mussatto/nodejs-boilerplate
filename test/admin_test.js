@@ -42,14 +42,14 @@ var admin_functions = function(){
   before(function(){
     models.sequelize.sync();
     app = create_server(8080);
-  })
+  });
 
   after(function() {
     app.close();
   });
 
   it("should create a post", should_create);
-  it("should delete a post", should_delete)
+  it("should delete a post", should_delete);
 };
 
 describe("admin", admin_functions);
