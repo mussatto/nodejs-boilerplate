@@ -28,6 +28,7 @@
     "mysql": "^2.9.0",
     "sequelize": "^3.7.1",
     "serve-favicon": "^2.3.0",
+    "sqlite3": "^3.1.0",
     "superagent": "^1.4.0"
   },
   "devDependencies": {

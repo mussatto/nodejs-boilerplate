@@ -45,11 +45,11 @@ server.listen(port,ipaddress);
 server.on('error', onError);
 server.on('listening', onListening);
 
-//models.sequelize.sync().then(function () {
+models.sequelize.sync().then(function () {
   var server = app.listen(app.get('port'), function() {
     debug('Express server listening on port ' + server.address().port);
   });
-//});
+});
 
 console.log('Created!');
 

@@ -1,16 +1,7 @@
 {
   "development": {
-  "username": "boilerplate",
-  "password": "boilerplate",
-  "database": "boilerplate",
-  "host": "localhost",
-  "dialect": "mysql",
-  "port": "3306",
-  "pool": {
-    "max": 5,
-    "min": 0,
-    "idle": 10000
-  }
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite"
   },
   "production": {
   "username": {"ENV":"OPENSHIFT_MYSQL_DB_USERNAME"},

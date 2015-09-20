@@ -1,4 +1,9 @@
-Simple Openshift boilerplate, but can be used for other projects too
+Goals:
+Learn NodeJS, how to make non-blocking calls and javascript.
+
+Create NodeJS application / boilerplate, to be deployed on Openshift and that can be used in other servers too.
+Must have a good test coverage.
+
 
 libraries / frameworks:
 express 4

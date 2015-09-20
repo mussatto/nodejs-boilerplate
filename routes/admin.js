@@ -24,13 +24,13 @@ router.post('/create_post',authentication.isAuthenticated, function(req, res, ne
   }
 
   persistPosts(user, short_tag, posts, function(){
+    console.log("persisted!");
     res.send(json_return);
   });
 
 });
 
 function persistPosts(user, short_tag, posts, callback){
-  
   callback();
 }
 
