@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "body-parser": "~1.13.2",
+    "chai": "^3.2.0",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "ejs": "^2.3.3",
@@ -26,10 +27,10 @@
     "mysql": "^2.9.0",
     "sequelize": "^3.7.1",
     "serve-favicon": "^2.3.0",
-    "superagent": "^1.4.0",
-    "unit.js": "^2.0.0"
+    "superagent": "^1.4.0"
   },
   "devDependencies": {
-    "mocha": "^2.3.1"
+    "mocha": "^2.3.1",
+    "supertest": "^1.1.0"
   }
 }
