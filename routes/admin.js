@@ -13,15 +13,25 @@ router.get('/create_post', authentication.isAuthenticated, function(req, res, ne
 });
 
 router.post('/create_post',authentication.isAuthenticated, function(req, res, next){
-  console.log('creating posts.....');
+  console.log('m=create_post');
   var short_tag = req.body.short_tag;
   var posts = req.body.posts;
-  console.log("short_tag:"+short_tag);
-  console.log("posts:"+posts);
+  var json_return;
+  var user = authentication.getUser(req);
 
-  res.render('admin/create_post');
+  if(!user){
+    json_return = {error:"session or user not found"};
+  }
+
+  persistPosts(user, short_tag, posts, function(){
+    res.send(json_return);
+  });
+
 });
 
-function save
+function persistPosts(user, short_tag, posts, callback){
+  
+  callback();
+}
 
 module.exports = router;

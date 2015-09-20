@@ -15,6 +15,19 @@ exports.isAuthenticated = function(req, res, next){
   res.redirect("/");
 }
 
+exports.getUser = function(req){
+  if (process.env.NODE_ENV === 'development'){
+    console.log("In development, user=ADMIN");
+    return "admin"
+  }else{
+    return req.session.user;
+  }
+}
+
+exports.encryptPass = function(pass){
+  var hash = crypto.createHash("md5").update(pass).digest('hex');
+}
+
 function isAdmin(session){
   return true;
 }
