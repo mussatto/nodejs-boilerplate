@@ -11,11 +11,9 @@ router.get('/create_post', function(req, res, next) {
 });
 
 router.post('/create_post', function(req, res, next){
-  console.log('post got');
-  var data = req.body.short_tag;
+  console.log('creating posts.....');
+  var short_tag = req.body.short_tag;
   var posts = req.body.posts;
-
-  
 });
 
 module.exports = router;
