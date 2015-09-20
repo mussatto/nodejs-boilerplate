@@ -10,3 +10,5 @@ jquey
 angularjs
 nodejs
 openshift
+mocha tests
+chai
