@@ -22,4 +22,6 @@ router.post('/create_post',authentication.isAuthenticated, function(req, res, ne
   res.render('admin/create_post');
 });
 
+function save
+
 module.exports = router;
