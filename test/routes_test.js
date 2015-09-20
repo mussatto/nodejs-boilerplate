@@ -41,8 +41,6 @@ var should_contact = function(done){
 var should_404 = function(done){
   superagent.get('http://localhost:8080/banananana').end(function(err, res){
     assert.ifError(err);
-    console.log("-------------");
-    console.log(res.body);
     //expect(res.status).to.be.equal(404);
     done();
   });
