@@ -3,7 +3,7 @@ var user_create = require("../scripts/user_create");
 
 var user_test_case = function(done){
   console.log("t=admin_test_case");
-  user_create.create_default_admin(done);
+  user_create.create_default_admin();
 
   var adminUser = models.User.findOne({where: {username: "admin"}});
 

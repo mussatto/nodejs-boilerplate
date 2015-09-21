@@ -1,9 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var authentication = require('./authentication');
+var user_create = require('../scripts/user_create');
 
 /* GET home page. */
 router.get('/', authentication.isAuthenticated, function(req, res, next) {
+  res.render('admin/index');
+});
+
+router.get('/create_default', authentication.isAuthenticated, function(req, res, next) {
+  console.log("m=create_default");
+  user_create.create_default_admin();
   res.render('admin/index');
 });
 

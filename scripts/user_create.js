@@ -29,5 +29,6 @@ function create_user(user, pass){
 
 exports.create_default_admin = function(callback){
   create_user("admin","defaultpass");
-  callback();
+  if(callback)
+    callback();
 }
