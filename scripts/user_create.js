@@ -27,4 +27,5 @@ function create_user(user, pass){
   console.log("admin_user:"+admin_user);
 }
 
+models.sequelize.sync();
 create_user("admin","defaultpass");
