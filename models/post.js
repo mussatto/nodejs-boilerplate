@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Post.hasMany(models.Post_Content)
+        Post.hasMany(models.PostContent)
       }
     }
   });

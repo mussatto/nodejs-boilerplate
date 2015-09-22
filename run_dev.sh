@@ -1,1 +1,1 @@
-DEBUG=myapp npm start
+supervisor server

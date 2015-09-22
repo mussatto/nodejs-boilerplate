@@ -27,8 +27,4 @@ function create_user(user, pass){
   console.log("admin_user:"+admin_user);
 }
 
-exports.create_default_admin = function(callback){
-  create_user("admin","defaultpass");
-  if(callback)
-    callback();
-}
+create_user("admin","defaultpass");

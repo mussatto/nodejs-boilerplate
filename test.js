@@ -1,3 +1,7 @@
-var create_server = require('./create_server');
+var models = require('./models');
 
-create_server(8080);
+var user = models.User.findOne({where: {
+  username:"admin"
+}}).then(function(user){
+  console.log("user:"+user.username);
+});

@@ -2,7 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
 
-  var Post_Content = sequelize.define("Post_Content", {
+  var PostContent = sequelize.define("PostContent", {
     title: DataTypes.STRING,
     content: DataTypes.TEXT,
     language: DataTypes.STRING
@@ -14,6 +14,6 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  return Post_Content;
+  return PostContent;
 
 };

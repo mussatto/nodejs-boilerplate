@@ -28,7 +28,7 @@ var should_create = function(done){
       }
     });
 
-    expect(posts.length).to.be.equal(2);
+    expect(posts.length).to.be.equal(1);
     done();
   });
 };
