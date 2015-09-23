@@ -6,6 +6,7 @@ var assert = require('assert');
 var models = require("../models");
 
 var should_create = function(done){
+
   console.log("t=should_create");
   var short_tag = "my_test_tag";
   var post_pt_br = { title:"Meu titulo em portugues",

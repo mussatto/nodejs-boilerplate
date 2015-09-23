@@ -49,14 +49,12 @@ function persistPosts(username, short_tag, posts, callback){
 }
 
 function persistPostAndContents(user, short_tag, posts, callback){
-  
+
   console.log("user:"+user.username);
 
   user.createPost({short_tag:short_tag}).then(function(post){
     createPostContents(post, posts, callback);
   });
-
-  callback();
 }
 
 function createPostContents(post, posts, callback){
@@ -65,8 +63,11 @@ function createPostContents(post, posts, callback){
       title:posts[i].title,
       content: posts[i].content,
       language: posts[i].language
+    }).then(function (postContent){
+      console.log("postContent created");
+      callback();
     });
   }
-  callback();
+
 }
 module.exports = router;
