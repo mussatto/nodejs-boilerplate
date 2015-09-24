@@ -26,12 +26,32 @@ router.get('/posts', function(req, res, next) {
 });
 
 router.get('/posts_json', function(req, res, next) {
-  var posts = models.Post.findAll({limit:10});
+  console.log("m=posts_json");
+  models.Post.findAll({limit:10}).then(function(posts){
+    var posts_json = [];
+    for(var i=0; i<posts.length;i++){
+
+      var postContent = posts[i].getPostContents();//then
+      post_json={short_tag:posts[i].short_tag,
+        title:postContent.title,
+        title:postContent.content};
+      posts_json.push(post_json);
+    }
+    console.log(JSON.stringify(posts_json));
+    res.write("ok");
+  });
+
+
+});
+
+function findPostContent(posts){
   var posts_json = [];
   for(var i=0; i<posts.length;i++){
-    var post_json = {title:posts[i].title, content:posts[i].content};
+    posts_json.push(post_json);
   }
-});
+  console.log(JSON.stringify(posts_json));
+  res.write("ok");
+}
 
 router.get('/contato', function(req, res, next) {
 
